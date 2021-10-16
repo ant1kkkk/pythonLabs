@@ -7,7 +7,7 @@ from display import Display
 class Main(Display, Person):
     def get_candidate(self):
         fake = Faker()
-        for i in range(randint(0, 9)):
+        for i in range(randint(4, 9)):
             self.full_name.append(fake.name())
             self.job_title.append(fake.job())
             self.job_salary.append(randint(0, 10000))
