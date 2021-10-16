@@ -21,8 +21,8 @@ class Main(Display, Person):
             self.company_address.append(fake.address())
 
 
-Gay = Main()
-Gay.get_candidate()
-Gay.get_employee()
-print(Gay.full_name)
-Gay.display()
+main = Main()
+main.get_candidate()
+main.get_employee()
+print(main.full_name)
+main.display()
