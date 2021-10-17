@@ -1,6 +1,6 @@
 class Person:
-    candidate = []
+    candidate = [str]
     id = 0
-    full_name = []
-    job_title = []
-    job_salary = []
+    full_name = [str]
+    job_title = [str]
+    job_salary = [int]

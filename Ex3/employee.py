@@ -1,6 +1,6 @@
 class Employee:
-    company = []
-    company_name = []
-    company_country = []
-    company_city = []
-    company_address = []
+    company = [str]
+    company_name = [str]
+    company_country = [str]
+    company_city = [str]
+    company_address = [str]
