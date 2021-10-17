@@ -9,22 +9,14 @@ class Candidate:
             'NotWorked': 'Null',
             'Working': 'Working'
         }
-        print('Choose your dismissal reason: ')
+        print('Choose your dismissal reason (if you are already working - input enter): ')
         for key, value in self.dismissal_reason_dict.items():
             print("{0}: {1}".format(key, value))
-        dismissal_reason = input()
-        if dismissal_reason == 'FamilyReasons':
-            self.dismissal_reason = self.dismissal_reason_dict['FamilyReasons']
-        elif dismissal_reason == 'LowSalary':
-            self.dismissal_reason = self.dismissal_reason_dict['LowSalary']
-        elif dismissal_reason == 'BadTeamMicroclimate':
-            self.dismissal_reason = self.dismissal_reason_dict['BadTeamMicroclimate']
-        elif dismissal_reason == 'LackManagementUnderstanding':
-            self.dismissal_reason = self.dismissal_reason_dict['LackManagementUnderstanding']
-        elif dismissal_reason == 'other':
-            self.dismissal_reason = self.dismissal_reason_dict['other']
-        elif dismissal_reason == 'NotWorked':
-            self.dismissal_reason = self.dismissal_reason_dict['NotWorked']
-        elif dismissal_reason == 'Working':
+        self.dismissal_reason = input()
+        if self.dismissal_reason in self.dismissal_reason_dict:
+            self.dismissal_reason = self.dismissal_reason_dict[self.dismissal_reason]
+            return self.dismissal_reason
+        elif self.dismissal_reason not in self.dismissal_reason_dict:
+            print('You have no dismissal reason')
             self.dismissal_reason = self.dismissal_reason_dict['Working']
-        return self.dismissal_reason
+            return self.dismissal_reason
