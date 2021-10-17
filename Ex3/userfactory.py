@@ -1,11 +1,10 @@
 from faker import Faker
 from random import randint
 from person import Person
-from candidate import Candidate
 from employee import Employee
 
 
-class UserFactory(Candidate):
+class UserFactory:
     def get_candidate(self):
         fake = Faker()
         for i in range(randint(4, 9)):
